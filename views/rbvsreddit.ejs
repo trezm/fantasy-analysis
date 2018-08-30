@@ -1,0 +1,39 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+<body class="container">
+
+<main>
+    <h1>RB TDs vs Reddit "<%= query %>"</h1>
+    <canvas id="chart" width="400" height="400"></canvas>
+</main>
+
+  <script>
+var ctx = document.getElementById("chart");
+var scatterChart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+        datasets: [{
+            label: 'Scatter Dataset',
+            borderColor: 'rgba(82, 135, 255, 1)',
+            backgroundColor: 'rgba(82, 135, 255, 0.2)',
+            data: <%- dataJSON %>
+        }]
+    },
+    options: {
+        responsive: false,
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+});
+</script>
+</body>
+</html>

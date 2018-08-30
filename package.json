@@ -1,0 +1,13 @@
+{
+    "name": "@runkit/pete_5b871ae61300250012cbd40e",
+    "version": "0.0.0-master",
+    "main": "./lib/5b871ae61300250012cbd40e",
+    "dependencies": {
+        "axios": "0.18.0",
+        "chartjs": "0.3.24",
+        "cheerio": "0.22.0",
+        "ejs": "^2.6.1",
+        "express": "^4.16.3",
+        "nodemon": "^1.18.4"
+    }
+}
